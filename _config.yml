@@ -1,0 +1,59 @@
+title:            Shh, Bart is testing now
+description:      Bart's thoughts on testing
+disqus_shortname: bartqa
+reading_time:     true
+words_per_minute: 200
+#Your site's domain goes here. Leave localhost server or blank when working locally.
+url:              http://localhost:4000
+
+# Owner/author information
+owner:
+  name:           Bart Szulc
+  avatar:         avatar.jpg
+  bio:            "Tester...yes, mostly tester."
+  email:          bart.szulc.qa@gmail.com
+  twitter:        BartSzulc
+  github:     	  bartszulc-qa
+
+# Background image to be tiled on all pages
+background: 
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:   
+google_verify:
+bing_verify:         
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: Feed
+    url: /feed.xml
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    Europe/Warsaw
+future:      true
+highlighter: pygments
+markdown:    kramdown
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
+
+# Amount of post to show on home page
+paginate: 5
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: true
+
+  coderay:
+    coderay_line_numbers: nil
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
