@@ -2,7 +2,7 @@
 layout: post
 title: Disclaimer
 description: "Who I represent? What is my motivation? Why should you disagree with me whenever you feel it is right thing to do."
-modified: 2014-09-25
+modified: 2014-09-26
 tags: [personal]
 image:
   feature: logo.jpg
