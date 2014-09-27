@@ -5,9 +5,7 @@ description: "Who I represent? What is my motivation? Why should you disagree wi
 modified: 2014-09-25
 tags: [personal]
 image:
-  feature: abstract-4.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+  feature: logo.jpg
 comments: true
 share: true
 ---
