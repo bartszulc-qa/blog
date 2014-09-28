@@ -90,7 +90,7 @@ Sure, it helps with testing. You can transform created BDD Scenarios to Test Sce
 
 BDD Scenarios fit into second quarter of Agile Testing Quadrants, so the quarter that supports team, by increasing the chance of delivering the right software, and is business facing, as scenarios are written in high level business language.
 
-![Agile Testing Quadrants]({{ site.url }}/images/agile-testing-quadrant.jpg)
+![Agile Testing Quadrants by Lisa Crispin]({{ site.url }}/images/agile-testing-quadrant.jpg)
 
 But BDD isn't a testing technique as it. It's a way of delivering software by understanding behaviours of required features. It's more about communication and conversation between different groups, finding common language, than it's about testing. At least to me.
 
