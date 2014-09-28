@@ -36,7 +36,7 @@ Wait a minute, a behaviour? Doesn't' the B in BDD stands for behaviour too? Yes,
 
 The process itself is pretty straight forward. You start with a feature, come up with all its behaviours, capture them as scenarios, properly formatted, and use them to drive development.
 
-Assuming you're member of a SCRUM team, you may want to discuss features and define scenarios during Backlog Refinement and/or Sprint Planning meeting. Just seat with your colleagues, representing different interest groups, development, testing, and business (so called Three Amigos), and discuss what exactly needs to be implemented as part of the iteration. Grab User Story, check what is the feature it implements or extends, agree on Acceptance Criteria, and come up with examples for the Criteria as BDD Scenarios while refining the Criteria. 
+Assuming you're member of a SCRUM team, you may want to discuss features and define scenarios during Backlog Refinement and/or Sprint Planning meeting. Just seat with your colleagues, representing different interest groups, development, testing, and business (so called Three Amigos), and discuss what exactly needs to be implemented as part of the iteration. The idea is to focus on intention not implementation. In summary, grab an User Story, check related feature, implemented or extended by the Story, agree on Acceptance Criteria, and come up with examples for the Criteria as BDD Scenarios while refining the Criteria. 
 
 Three Amigos is the main difference between BDD and TDD. While in TDD you can easily implement good unit. talking only with yourself, you really can't do that with features. You simply don't have enough knowledge, not so technical as domain. 
 
