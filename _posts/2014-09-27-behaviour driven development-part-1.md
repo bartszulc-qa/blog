@@ -88,7 +88,11 @@ As a developer you use the suite of feature files as a continuous reminder, a ve
 
 Sure, it helps with testing. You can transform created BDD Scenarios to Test Scenarios, and include automated tests with Cucumber into your regression suite. But you can do that without BDD. You just leverage created artefacts for the purpose of testing.
 
-BDD isn't a testing technique. It's a way of delivering software by understanding behaviours of required features. It's more about communication and conversation between different groups, finding common language, than it's about testing. At least to me.
+BDD Scenarios fit into second quarter of Agile Testing Quadrants, so the quarter that supports team, by increasing the chance of delivering the right software, and is business facing, as scenarios are written in high level business language.
+
+![Agile Testing Quadrants]({{ site.url }}/images/agile-testing-quadrant.jpg)
+
+But BDD isn't a testing technique as it. It's a way of delivering software by understanding behaviours of required features. It's more about communication and conversation between different groups, finding common language, than it's about testing. At least to me.
 
 Nevertheless, I'm a tester and have something to say about BDD, and as one of my kind, you really should  leverage the opportunity BDD gives you. Participate in Three Amigos meetings. Ask questions you normally ask during Sprint. Help refine features. Come up with more Acceptance Criteria, more Scenarios, more User Stories for later implementation. Use created Scenarios as Acceptance Scenarios. Automate. Validate.
 
