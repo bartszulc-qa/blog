@@ -82,7 +82,7 @@ In some implementations of the pyramid there is an additional layer, covering ma
 
 So how my tests looked comparing to the ideal structure. Not so good. In fact it looked like I turned the pyramid upside down. Instead of the expected structure I ended up with something that looked line an ice cream cone, with Acceptance Tests as BDD Scenarios as ice cubes. Something clearly wasn't right.
 
-![Test Pyramid (c) Martin Fowler]({{ site.url }}/assets/img/test-cone.png)
+![Test Cone]({{ site.url }}/assets/img/test-cone.png)
 
 #### Doubts
 
