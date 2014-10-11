@@ -2,31 +2,32 @@
 layout: post
 title: Behaviour Driven Development - Prologue
 description: "What is BDD? How BDD fits into testing? What is my experience with BDD?"
-modified: 2014-09-27
-tags: [bdd, agile, scrum, testing, article]
+created: 2014-09-27
+modified: 2014-10-11
+tags: [bdd, agile, scrum, testing, article, story]
 image:
   feature: logo.jpg
 comments: true
 share: true
 ---
 
-Behaviour Driven Development has been on hype a while now, and still gaining on popularity amongst agile software development teams. More and more companies adopt BDD to help their teams understand business requirements better, and by that achieve the sole purpose of development, delivering software that meets client, or more general, shareholders expectation. 
+Behaviour Driven Development has been on hype a while now, and still gaining on popularity amongst agile software development teams. More and more companies adopt BDD to help their teams understand business requirements better, and by that achieve the sole purpose of development, delivering software that meets client, or more general, stakeholders expectation. 
 
-In many cases User Stories and Acceptance Criteria are simple not enough for the development team to clearly understand what is expected from them to deliver. BDD helps refine expectations by defining examples of feature behaviour as scenarios. It becomes a formalized method of communication between various interest groups targeted at product features. 
+In many cases User Stories and Acceptance Criteria are simple not enough for the development team to clearly understand what is expected from them to deliver. Behaviour Driven Development helps refine expectations by defining Examples of Feature Behaviour as Scenarios. BDD becomes a formalized way of communicating product features between various interest groups speaking different language.
 
 ## Succeeding through failure
 
-I've been working with Behaviour Driven Development for some time now. I'm definitely not an expert, doubt I'm even experienced BDD adopter. Nevertheless, I have some experience in BDD. In fact I probably went through all the possible stages of failing with BDD, and this is the base for the article. I won't write about how to succeed with BDD... but how to fail. 
+I've been working with Behaviour Driven Development for some time now. I'm definitely not an expert, doubt I'm even experienced BDD adopter. Nevertheless, I have some experience in BDD. In fact I probably went through all the possible stages of failing with BDD that are out there, and this is the base for the article. I won't write about how to adopt working BDD... rather how to fail with it. 
 
 I find it easier to succeed when I know all the symptoms of failure. I also find it easier for people to relate to a failure rather than success... or maybe it's just Polish thing.
 
 ## What is BDD?
 
-Before I start the journey, I need to elaborate on Behaviour Driven Development first.
+Before I start the journey, I need to discuss a little bit more Behaviour Driven Development first.
 
-### ... and how is it related to TDD
+### ... and how it is related to TDD
 
-Whenever I talk about BDD, I always refer to TDD - Test Driven Development. You may ask what one method has in common with the other? Clearly TDD is more technical centric than BDD. You may say T stands for Technical, and B for Business, and you are probably right. At the end TDD is about writing tests for units of code, while BDD is about defining behaviours of a product feature. However, when you look closely, you find TDD isn't really about testing as it's about design. Developer, before coding, has to look at the implementation, or rather an vision of the implementation, from a different perspective, perspective of an user, another unit. 
+Whenever I talk about BDD, I always refer to TDD - Test Driven Development. You may ask what one method has in common with the other? Clearly TDD is more technical centric than BDD. You may say T stands for Technical, and B for Business, and you are probably right. At the end TDD is about writing tests for units of code, while BDD is about defining behaviours of a product feature. However, when you look closely, you find TDD isn't really about testing as it's about design. Developer, before coding, has to look at the implementation, or rather a vision of the implementation, from a different perspective, perspective of an user, another unit. 
 
 Writing tests first is just a way of placing yourself as a consumer of your unit. You look at the unit as a provider of particular functionality, the unit behaves in certain way, and you're trying to capture all the behaviours, implement tests for them first, then code, and refactor. One behaviour at a time. 
 
@@ -38,9 +39,9 @@ The process itself is pretty straight forward. You start with a feature, come up
 
 Assuming you're member of a SCRUM team, you may want to discuss features and define scenarios during Backlog Refinement and/or Sprint Planning meeting. Just seat with your colleagues, representing different interest groups, development, testing, and business (so called Three Amigos), and discuss what exactly needs to be implemented as part of the iteration. The idea is to focus on intention not implementation. In summary, grab an User Story, check related feature, implemented or extended by the Story, agree on Acceptance Criteria, and come up with examples for the Criteria as BDD Scenarios while refining the Criteria. 
 
-Three Amigos is the main difference between BDD and TDD. While in TDD you can easily implement good unit. talking only with yourself, you really can't do that with features. You simply don't have enough knowledge, not so technical as domain. 
+Three Amigos meetings are the main difference between BDD and TDD. While in TDD you can easily implement good unit. talking only to yourself, you really can't do that with features. You simply don't have enough knowledge, not so technical as domain, and you're lacking the vision.
 
-You may argue in TDD you have peer review, either by pair programming or code review, but still, you are having a conversation with members of the same group, development. You need more than that to implement proper feature not only developers will use.
+You may argue in TDD you have peer review, either pair programming or code review, but still, you are having a conversation with members of the same group, development. You need more than that to implement proper feature not only developers will use.
 
 ### The outcome
 
@@ -78,7 +79,7 @@ The neat feature of Gherkin is that it integrates with tools that support automa
 
 ### The goal
 
-Feature files, or rather their contents, should drive the development through the iteration and... reduce the risk of delivering software that doesn't meet expectations. Where implemented features doesn't work according to the defined scenarios. 
+Feature files, or rather their contents, should drive the development through the iteration and... reduce the risk of delivering software that doesn't meet expectations,where implemented features doesn't work according to the defined scenarios. 
 
 As a developer you use the suite of feature files as a continuous reminder, a verification of what you do is right, and whether the state of system is right.
 
