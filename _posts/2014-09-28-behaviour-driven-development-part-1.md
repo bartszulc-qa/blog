@@ -99,7 +99,7 @@ I started having doubts. BDD doesn't work. I have my Scenarios in Gherkin. I hav
 
 I will be trying to answer these questions in next posts of the series.
 
-### Benefits
+#### Benefits
 
 Although the main objective wasn't met - delivery didn't improve - there were some benefits to the whole idea of including Cucumber into the test framework... other than me learning stuff of course :) 
 

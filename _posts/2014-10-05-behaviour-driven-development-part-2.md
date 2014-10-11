@@ -2,8 +2,8 @@
 layout: post
 title: Behaviour Driven Development - Part 2
 description: "BDD as a way of gathering requirements."
-created: 2014-10-11
-modified: 2014-10-05
+created: 2014-10-05
+modified: 2014-10-11
 tags: [bdd, agile, scrum, testing, article, story]
 image:
   feature: logo.jpg
@@ -51,7 +51,7 @@ The whole situation we found ourselves in looked a lot like Waterfall, a Scrumfa
 
 While implementing BDD at smaller scale you also need to consider social aspects and how they might impact delivery. Excluding developers from meetings, ignoring their contribution and input, could have a negative impact on their morale and productivity, it would be harder for them to identify with created product, and feel responsibility and accountability for the product success.
 
-### Benefits
+#### Benefits
 
 Although the main objective wasn't achieved, we did improve on delivery a little. Also, these two Amigos meetings we had, between me and business, improved quality of requirements, as we have started describing in details new Behaviours of Features. Answering questions normally developers answer during development, like what exactly Acceptance Criteria meant, how the feature should behave, what are the examples of its new/modified behaviour. Meetings also helped business understand how not enough details may impact implementation and how hard it's to elaborate on an idea that can be easily fit in a single statement. Everyone has started understanding the complexity behind implementation, how new behaviours may overlap or affect already implemented, and how it may impact usability of the system. In many cases meetings resulted in reduced scope of User Stories.
 
