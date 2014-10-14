@@ -3,8 +3,7 @@ description:      Bart's thoughts on testing
 disqus_shortname: bartqa
 reading_time:     true
 words_per_minute: 200
-#Your site's domain goes here. Leave localhost server or blank when working locally.
-#url:              http://bartszulc-qa.github.io/blog
+url:              http://bartszulc-qa.github.io/blog
 
 # Owner/author information
 owner:
