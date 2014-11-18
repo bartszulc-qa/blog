@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Behaviour Driven Development - Part 1
+title: Behavior Driven Development - Part 1
 description: "My first encounter with BDD, or at least how I understood BDD back then."
 created: 2014-09-28
 modified: 2014-10-11
@@ -11,7 +11,7 @@ comments: true
 share: true
 ---
 
-Assuming you read my prologue to the series about BDD, you should be fairly familiar with the basics. 
+Assuming you read my prologue to the series about BDD, you should be fairly familiar with the basics.
 
 Interested in how I started with BDD? You'll never guess...
 
@@ -38,7 +38,7 @@ Scenario Outline: As a user I want to find nearby stops to post code of my choic
 	| <second-stopname>	| <second-stopcode>	| <second-towards>	| <second-routes>	|
 	| <third-stopname>	| <third-stopcode>	| <third-towards>	| <third-routes>	|
 	| <fourth-stopname>	| <fourth-stopcode>	| <fourth-towards>	| <fourth-routes>	|
-	
+
 	Examples: Stops nearby a postcode
 	| postcode 	| first-stopname 		| first-stopcode 	| first-towards 						| first-routes 										| second-stopname 		| second-stopcode 	| second-towards 							| second-routes 									| third-stopname 		| third-stopcode 	| third-towards 					| third-routes 	| fourth-stopname 				| fourth-stopcode 	| fourth-towards 			| fourth-routes 			|
 	| N17 		| Scotland Green (B) 	| 57704 			| towards Manor House or Stamford Hill. | 149,  259,  279,  341,  349,  476,  N76,  N279 	| Lordship Lane (R) 	| 73479 			| towards Northumberland Park or Edmonton. 	| 149,  259,  279,  341,  349,  476,  N76,  N279 	| Pembury Road (X) 		| 47842 			| towards North Middlesex Hospital. | 318 			| Pembury Road (T) 				| 75293 			| towards Stamford Hill. 	| 318 						|
@@ -71,7 +71,7 @@ First attempt, first failure. At least I learnt a lot.
 Being tester in Agile isn't only about Automation. In fact some people may struggle with automation and leaving the task to them may not only impact project, but also them personally. I had to understand I can ask other people for help if I need it, and working in an Agile environment is all about helping each other and learning together. So, maybe if I don't feel capable in particular tool or language, I should ask a developer for help, and learn from him. This didn't cross my mind back then. I needed to prove myself. Prove I'm a developer. Instead of pairing with experienced developer, I struggled, and my solution was contributing to technical debt (oh yes, testers have to consider technical debt while implementing their automated tests and testing tools). It took me a while to understand tester in Agile must leverage all the available opportunities help him find time to work through all the quarters of Agile Testing Quadrants, and not get stuck on a particular activity.
 
 #### Test Pyramid
-As the automated tests began to be harder to maintain, and as started analysing my tests in terms of scope, level of details, utilized  interfaces - access layers, I struggled with these questions.. Does every test need to exercise application from the most top layer, User Interface? Does every test need to be so unstable because of unrelated conditions, like network latency? Does every test need to take so long to execute and return result? Hope not. This is when I first came across Test Pyramid - the perfect structure of automated tests. 
+As the automated tests began to be harder to maintain, and as started analysing my tests in terms of scope, level of details, utilized  interfaces - access layers, I struggled with these questions.. Does every test need to exercise application from the most top layer, User Interface? Does every test need to be so unstable because of unrelated conditions, like network latency? Does every test need to take so long to execute and return result? Hope not. This is when I first came across Test Pyramid - the perfect structure of automated tests.
 
 ![Test Pyramid (c) Martin Fowler]({{ site.url }}/assets/img/test-pyramid.png)
 
@@ -79,7 +79,7 @@ At the bottom of the pyramid, at its foundations, you will find Unit Tests (so c
 
 In the middle you will find tests that exercise many units building services (so called medium tests, medium in scope and details). These tests are slower comparing to Unit Tests, as their need to spawn a context with all the classes, their configurations, integration details. There are also less credible, more error prone, than small tests, as they require all the units to work correctly, and may require communication over network. You may test the components through an API. As these tests are in the middle of the structure, you should have fair number of them, not too much, not to little, just enough.
 
-At the top of the pyramid are end to end tests, big tests (high in scope, low in details), that require all the components, all the applications in a system, to work together. These are the tests you would normally execute from an user perspective, through User Interface. Big tests are the most unreliable ones. Not only dependent components may work incorrectly due to various reasons, including environmental and configuration, but you may also encounter issues specific to distributed systems, like networking and concurrency issues. These tests are also very slow. You need to create proper environment with all the components for the tests to run, and you are affected by latencies in communication between these components, limited resources, and so on. You should have limited number of such tests. Only the most crucial behaviours should be represented by big tests. Analyse business and technical risk while creating big tests.
+At the top of the pyramid are end to end tests, big tests (high in scope, low in details), that require all the components, all the applications in a system, to work together. These are the tests you would normally execute from an user perspective, through User Interface. Big tests are the most unreliable ones. Not only dependent components may work incorrectly due to various reasons, including environmental and configuration, but you may also encounter issues specific to distributed systems, like networking and concurrency issues. These tests are also very slow. You need to create proper environment with all the components for the tests to run, and you are affected by latencies in communication between these components, limited resources, and so on. You should have limited number of such tests. Only the most crucial behaviors should be represented by big tests. Analyse business and technical risk while creating big tests.
 
 In some implementations of the pyramid there is an additional layer, covering manual or exploratory tests. Personally, I prefer the second implementation.
 
@@ -101,7 +101,7 @@ I will be trying to answer these questions in next posts of the series.
 
 #### Benefits
 
-Although the main objective wasn't met - delivery didn't improve - there were some benefits to the whole idea of including Cucumber into the test framework... other than me learning stuff of course :) 
+Although the main objective wasn't met - delivery didn't improve - there were some benefits to the whole idea of including Cucumber into the test framework... other than me learning stuff of course :)
 
 We had had a living documentation. An executable documentation. The way our system behaved had it representation in Scenarios, written in natural language, which were used to drive testing and look after potential regression issues. We were able to fairly fast spot a breaking change, inform product owner about potential issues and impact on feature. We even didn't need to do that as he was able to read the results himself. He didn't need to analyse what a particular method name of a JUnit really means, he could just read a scenario, check its status, and relate to it.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Behaviour Driven Development - Epilogue
+title: Behavior Driven Development - Epilogue
 description: "BDD, Recap."
 created: 2014-11-16
 tags: [bdd, agile, scrum, testing, article, story]
@@ -10,7 +10,7 @@ comments: true
 share: true
 ---
 
-Given what I experienced, learned, and what mistakes I made, my second approach to Behaviour Driven Development would look completely different.
+Given what I experienced, learned, and what mistakes I made, my second approach to Behavior Driven Development would look completely different.
 
 It's not that you don't need to speak to business in order to understand their needs, it's not like you don't need to use tools to automate and shorten feedback loop, it's not like you don't need to employ what's been created during Three Musketeers sessions for the testing purpose. It's all about how you do it. It's all about execution.
 
@@ -18,7 +18,7 @@ It's not that you don't need to speak to business in order to understand their n
 
 It's very pulling to use tools and techniques other teams use. Especially when everyone considers the thing as a cure for every evil out there. A golden bullet that may help resolve all your issues with Delivery.
 
-But do you really need it or you just want it? Do you really need Behaviour Driven Development? Are misunderstood requirements the root cause of your missed deadlines, unreliable software, failing sprints and demos? Or is it somewhere else? Do proper root cause analysis of all the problems you experience during a Sprint.
+But do you really need it or you just want it? Do you really need Behavior Driven Development? Are misunderstood requirements the root cause of your missed deadlines, unreliable software, failing sprints and demos? Or is it somewhere else? Do proper root cause analysis of all the problems you experience during a Sprint.
 
 Gather, discuss, and group problems. Discuss causes. Do proper analysis. Ask the team 5 times Why. Get to the bottom of the issue. Maybe you will find your problems have nothing in common with requirements, but in fact are related to low quality of code, poor communication between testers and developers, clumsy daily scrums, or other thing. Maybe in fact you will find the root cause lays in how things are communicated between development team and business.
 
@@ -28,7 +28,7 @@ Try to be pragmatic. Understand your issues. Implement minimum changes that will
 
 ## Don't leave anyone behind
 
-Great you come up with a solution to your problems, and this solution is Behaviour Driven Development, but it won't work if you're the only one who knows that. You need to talk to others, help them understand the issues, what causing them, and what are the potential solutions.
+Great you come up with a solution to your problems, and this solution is Behavior Driven Development, but it won't work if you're the only one who knows that. You need to talk to others, help them understand the issues, what causing them, and what are the potential solutions.
 
 Start with an introduction to BDD. Maybe do a workshop. Discuss what problems you face, what is BDD, and how can it help prevent these issues from happening. Discuss different concepts, like features, how they relate to user stories, scenarios, and how they might relate to acceptance criteria. Make sure everyone understands BDD is not about testing, but about answering and learning about unknowns. Make sure everyone is familiar with what negative space means... and how important it's for BDD.
 
@@ -50,15 +50,15 @@ Do a dry run when the focus is on conversation during Spring not the tooling. Di
 
 Once you and your team are happy with where the things are going. Scenarios that are being created are getting better. Business and developers have less problems communicating with each other. Everyone is engaged.
 
-Employ tools. Choose the ones not only you are happy to use, but also developers are. Don't forget that Behaviours should be used to Drive Development.
+Employ tools. Choose the ones not only you are happy to use, but also developers are. Don't forget that Behaviors should be used to Drive Development.
 
-Encourage developers to implement the glue code on their own. They should update it as they go with feature implementation. Make sure their actions are synchronized with Behaviours. They react to changes in Features checks results.
+Encourage developers to implement the glue code on their own. They should update it as they go with feature implementation. Make sure their actions are synchronized with Behaviors. They react to changes in Features checks results.
 
-You will need to constantly remind everyone BDD is a two part process. We did the first part, we have Behaviours. Now use these Behaviours to implement the right software!
+You will need to constantly remind everyone BDD is a two part process. We did the first part, we have Behaviors. Now use these Behaviors to implement the right software!
 
 ## Improve
 
-Seeing how well developers work on Behaviours. How they drive their actions by what is written, implement glue code, and react to changes in results. You may want to improve a little.
+Seeing how well developers work on Behaviors. How they drive their actions by what is written, implement glue code, and react to changes in results. You may want to improve a little.
 
 Why not implement Acceptance Test Driven Development?
 
@@ -66,7 +66,7 @@ Use Scenarios created together with Business Stakeholders, Acceptance Scenario, 
 
 You now have Top-Bottom approach, why not do Bottom-Up at the same time, and meet in the middle?
 
-As soon as everyone understands the key concept of Behaviour Driven Development and Acceptance Test Driven Development, Test First, and how beneficial it can be for your delivery, why not improve even further and try Test Driven Development at the same time?
+As soon as everyone understands the key concept of Behavior Driven Development and Acceptance Test Driven Development, Test First, and how beneficial it can be for your delivery, why not improve even further and try Test Driven Development at the same time?
 
 Nothing forbids you from doing BDD, ATDD, and TDD at the same time. Everything can work together for your good.
 
