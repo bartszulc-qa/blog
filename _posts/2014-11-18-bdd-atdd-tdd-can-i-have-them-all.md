@@ -20,7 +20,7 @@ You start by defining Behaviors of your product Features. Discuss User Stories, 
 
 Don't think about implementation at this stage. Focus on the outcome, as you were using your system without help of any interface. As you were one.
 
-Describe expected Behaviors as Scenarios. Use the Given, When, Then, to give them a structure. Be declarative. Focus on intent. Build your ubiquitous language you use to document various aspects of your domain. Build the living documentation. Single source of truth.
+Write down expected Behaviors as Scenarios. Use the Given, When, Then, to give them a structure. Be declarative. Focus on intent. Build your ubiquitous language you use to document various aspects of your domain. Build the living documentation. Single source of truth.
 
 Remember about the negative space. Flush out all the known unknowns first. Discover unknown unknowns. Appreciate the time you, business experts, and developers, invest to work out differences and misunderstandings.
 
