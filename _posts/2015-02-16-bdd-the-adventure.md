@@ -20,10 +20,8 @@ Very often people who accomplished something forget to mention the bumpy road th
 
 Here is the presentation.
 
-<iframe 
-
-src="https://docs.google.com/presentation/d/1Z58iaMeXoFU_xM2x4Po54AsOjZkgIGQe5smelP1RYho/embed?
-
-start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" 
-
-allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<div id="parent">
+    <div id="wrapper" style="position:relative">
+        <iframe style="position:absolute;top:0px;width:100%;height:100vh;" src="https://docs.google.com/presentation/d/1Z58iaMeXoFU_xM2x4Po54AsOjZkgIGQe5smelP1RYho/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+</div>
