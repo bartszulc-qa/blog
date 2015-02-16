@@ -21,6 +21,6 @@ Very often people who accomplished something forget to mention the bumpy road th
 Here is the presentation.
 
 
-<iframe style="position: relative; height: 100%; width: 100%;" src="https://docs.google.com/presentation/d/1Z58iaMeXoFU_xM2x4Po54AsOjZkgIGQe5smelP1RYho/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+<iframe style="position: relative; height: 500px; width: 100%;" src="https://docs.google.com/presentation/d/1Z58iaMeXoFU_xM2x4Po54AsOjZkgIGQe5smelP1RYho/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
 </iframe>
 
