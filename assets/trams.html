@@ -3,132 +3,134 @@
       <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
       <script src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.0.1/src/markerwithlabel.js"></script>
       <script>
-         function initialize() {
-             var frequency = 10000;
-             var remove = 600000;
-             var url = "https://api.um.warszawa.pl/api/action/dbstore_get/?id=daeea0db-0f9a-498d-9c4f-210897daffd2&apikey=1e1cf23e-69fe-486c-abbf-4f2d48a681f7";
-             var tramIcon = "http://google-maps-icons.googlecode.com/files/tram.png";
-             var warsawLatLng = new google.maps.LatLng(52.23, 21.00);
-             var mapOptions = {
-                 zoom: 13,
-                 center: warsawLatLng
-             };
+      function initialize() {
+          var frequency = 10000;
+          var remove = 600000;
+          var url = "https://api.um.warszawa.pl/api/action/dbstore_get/?id=daeea0db-0f9a-498d-9c4f-210897daffd2&apikey=1e1cf23e-69fe-486c-abbf-4f2d48a681f7";
+          var tramIcon = "http://google-maps-icons.googlecode.com/files/tram.png";
+          var warsawLatLng = new google.maps.LatLng(52.23, 21.00);
+          var mapOptions = {
+              zoom: 13,
+              center: warsawLatLng
+          };
 
-             var request = new XMLHttpRequest();
-             var markers = [];
+          var request = new XMLHttpRequest();
+          var markers = [];
 
-             var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+          var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-             function doRequest() {
-                 console.time('positions');
-                 request.open('GET', url);
-                 request.send();
-             }
+          function doRequest() {
+              console.time('positions');
+              request.open('GET', url);
+              request.send();
+          }
 
-             request.onreadystatechange = function () {
-                 if (request.readyState == 4 && request.status == 200) {
-                     console.timeEnd('positions');
-                     update(JSON.parse(request.responseText).result);
-                 }
-             };
+          request.onreadystatechange = function () {
+              if (request.readyState == 4 && request.status == 200) {
+                  console.timeEnd('positions');
+                  update(JSON.parse(request.responseText).result);
+              }
+          };
 
-             function extract(data) {
-                 var trams = [];
-                 data.forEach(function (entries) {
-                     var entry = entries.values;
-                     var tram = {};
-                     entry.forEach(function (value) {
-                         tram[value.key] = value.value;
-                     });
-                     trams.push(tram);
-                 });
-                 return trams;
-             }
+          function extract(data) {
+              var trams = [];
+              data.forEach(function (entries) {
+                  var entry = entries.values;
+                  var tram = {};
+                  entry.forEach(function (value) {
+                      tram[value.key] = value.value;
+                  });
+                  trams.push(tram);
+              });
+              return trams;
+          }
 
-             function id(tram) {
-                 return tram.linia + "-" + tram.taborowy + tram.brygada;
-             }
+          function id(tram) {
+              return tram.linia + "-" + tram.taborowy + tram.brygada;
+          }
 
-             function draw(trams, markers) {
-                 console.time('markers');
-                 trams.forEach(function (tram) {
-                     var tramId = id(tram);
-                     var latLng = new google.maps.LatLng(tram.gps_szer, tram.gps_dlug);
-                     var marker = markers[tramId];
-                     if (typeof marker === 'undefined') {
-                         marker = new MarkerWithLabel({
-                             position: latLng,
-                             map: map,
-                             title: tram.linia,
-                             icon: tramIcon,
-                             labelContent: tram.linia,
-                             labelAnchor: new google.maps.Point(22, 0),
-                             labelClass: "labels",
-                             labelStyle: {
-                                 opacity: 0.75
-                             }
-                         });
-                         markers[tramId] = marker;
-                     } else {
-                         marker.setPosition(latLng);
-                     }
-                 });
-                 console.timeEnd('markers');
-             }
+          function draw(trams, markers) {
+              console.time('markers');
+              trams.forEach(function (tram) {
+                  if (typeof tram !== undefined) {
+                      var tramId = id(tram);
+                      var latLng = new google.maps.LatLng(tram.gps_szer, tram.gps_dlug);
+                      var marker = markers[tramId];
+                      if (typeof marker === 'undefined') {
+                          marker = new MarkerWithLabel({
+                              position: latLng,
+                              map: map,
+                              title: tram.linia,
+                              icon: tramIcon,
+                              labelContent: tram.linia,
+                              labelAnchor: new google.maps.Point(22, 0),
+                              labelClass: "labels",
+                              labelStyle: {
+                                  opacity: 0.75
+                              }
+                          });
+                          markers[tramId] = marker;
+                      } else {
+                          marker.setPosition(latLng);
+                      }
+                  }
+              });
+              console.timeEnd('markers');
+          }
 
-             function filter(trams, markers) {
-                 var remove = trams.filter(function (tram, index, array) {
-                     var now = Date.now();
-                     var update = new Date(tram.ostatnia_aktualizacja).getTime();
-                     var diff = now - update;
-                     return diff < remove;
-                 });
-                 return remove;
-             }
+          function filter(trams, markers) {
+              var remove = trams.filter(function (tram, index, array) {
+                  var now = Date.now();
+                  var update = new Date(tram.ostatnia_aktualizacja).getTime();
+                  var diff = now - update;
+                  return diff < remove;
+              });
+              return remove;
+          }
 
-             function reduce(trams, markers, remove) {
-                 remove.forEach(function (tram) {
-                     delete trams[trams.indexOf(tram)];
-                 });
-                 remove = [];
-                 var trampsIds = Object.keys(markers);
-                 for (i = 0; i < trampsIds.length; i++) {
-                     var found = false;
-                     var expectedTrampId = trampsIds[i];
-                     for (j = 0; j < trams.length; j++) {
-                         var tram = trams[i];
-                         if (typeof tram !== undefined) {
-                             var tramId = id(tram);
-                             if (tramId == expectedTrampId) {
-                                 found = true;
-                                 break;
-                             }
-                         }
-                     }
-                     if (!found) {
-                         remove.push(expectedTrampId);
-                     }
-                 }
-                 remove.forEach(function (key) {
-                     var marker = markers[key];
-                     marker.setMap(null);
-                     delete markers[key];
-                 });
-             }
+          function reduce(trams, markers, remove) {
+              remove.forEach(function (tram) {
+                  delete trams[trams.indexOf(tram)];
+              });
+              remove = [];
+              var trampsIds = Object.keys(markers);
+              for (i = 0; i < trampsIds.length; i++) {
+                  var found = false;
+                  var expectedTrampId = trampsIds[i];
+                  for (j = 0; j < trams.length; j++) {
+                      var tram = trams[i];
+                      if (typeof tram !== undefined) {
+                          var tramId = id(tram);
+                          if (tramId == expectedTrampId) {
+                              found = true;
+                              break;
+                          }
+                      }
+                  }
+                  if (!found) {
+                      remove.push(expectedTrampId);
+                  }
+              }
+              remove.forEach(function (key) {
+                  var marker = markers[key];
+                  marker.setMap(null);
+                  delete markers[key];
+              });
+          }
 
-             function update(data) {
-                 var trams = extract(data);
-                 var remove = filter(trams, markers);
-                 reduce(trams, markers, remove);
-                 console.log(trams.length + ' trams');
-                 draw(trams, markers);
-             }
+          function update(data) {
+              var trams = extract(data);
+              var remove = filter(trams, markers);
+              reduce(trams, markers, remove);
+              console.log(trams.length + ' trams');
+              draw(trams, markers);
+          }
 
-             doRequest();
-             setInterval(function () {
-                 doRequest();
-             }, frequency);
-         }
+          doRequest();
+          setInterval(function () {
+              doRequest();
+          }, frequency);
+      }
       </script>
       <style>
          #map-canvas {
